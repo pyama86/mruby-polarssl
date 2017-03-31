@@ -697,10 +697,6 @@ void mrb_mruby_polarssl_gem_init(mrb_state *mrb) {
   des3 = mrb_define_class_under(mrb, cipher, "DES3", cipher);
   mrb_define_class_method(mrb, des3, "encrypt", mrb_des3_encrypt, MRB_ARGS_REQ(4));
   mrb_define_class_method(mrb, des3, "decrypt", mrb_des3_decrypt, MRB_ARGS_REQ(4));
-
-  base64 = mrb_define_module_under(mrb, p, "Base64");
-  mrb_define_class_method(mrb, base64, "encode", mrb_base64_encode, MRB_ARGS_REQ(1));
-  mrb_define_class_method(mrb, base64, "decode", mrb_base64_decode, MRB_ARGS_REQ(1));
 }
 
 void mrb_mruby_polarssl_gem_final(mrb_state *mrb) {
